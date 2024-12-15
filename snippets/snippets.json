@@ -1,0 +1,40 @@
+{
+    "SWEP": {
+        "prefix": "glua.SWEP",
+        "body": [
+            "SWEP.PrintName = \"NAME\"",
+            "SWEP.Author = \"AUTHOR\"",
+            "SWEP.Contact = \"CONTACT\"",
+            "SWEP.Purpose = \"PURPOSE\"",
+            "SWEP.Instructions = \"INSTRUCTIONS\"",
+            "SWEP.Spawnable = true",
+            "SWEP.AdminOnly = false",
+            "SWEP.Category = \"CATEGORY\"",
+            "",
+            "SWEP.ViewModel = \"VIEWMODEL\"",
+            "SWEP.WorldModel = \"WORLDMODEL\"",
+            "SWEP.UseHands = true",
+            "",
+            "SWEP.Slot = \"SLOT\"",
+            "SWEP.SlotPos = \"SLOTPOS\"",
+            "",
+            "SWEP.Primary.Ammo = \"PRIMARYAMMO\"",
+            "SWEP.Primary.ClipSize = \"CLIPSIZE\"",
+            "SWEP.Primary.DefaultClip = \"DEFAULTCLIP\"",
+            "SWEP.Primary.Automatic = true",
+            "",
+            "SWEP.Secondary.Ammo = \"SECONDARYAMMO\"",
+            "SWEP.Secondary.ClipSize = \"CLIPSIZE\"",
+            "SWEP.Secondary.DefaultClip = \"DEFAULTCLIP\"",
+            "SWEP.Secondary.Automatic = false",
+            "",
+            "SWEP.DrawCrosshair = true",
+            "SWEP.HoldType = \"HOLDTYPE\"",
+            "",
+            "function SWEP:Initialize()",
+            "    self:SetHoldType(self.HoldType)",
+            "end"
+        ],
+        "description": "Creates the SWEP structure"
+    }
+}
