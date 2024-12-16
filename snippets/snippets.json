@@ -88,6 +88,11 @@
     "Entity-Server": {
         "prefix": "glua.Entity-Server",
         "body": [
+            "AddCSLuaFile('cl_init.lua')",
+            "AddCSLuaFile('shared.lua')",
+            "",
+            "include('shared.lua')",
+            "",
             "function ENT:Initialize()",
             "    self:SetModel(\"MODEL\")",
             "    self:PhysicsInit(SOLID_VPHYSICS)",
@@ -101,6 +106,8 @@
     "Entity-Client": {
         "prefix": "glua.Entity-Client",
         "body": [
+            "include('shared.lua')",
+            "",
             "function ENT:Draw()",
             "    self:DrawModel()",
             "end"
