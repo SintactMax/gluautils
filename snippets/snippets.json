@@ -36,5 +36,75 @@
             "end"
         ],
         "description": "Creates the SWEP structure"
+    },
+    "Entity": {
+        "prefix": "glua.Entity",
+        "body": [
+            "ENT.Type = \"anim\"",
+            "ENT.Base = \"base_gmodentity\"",
+            "ENT.PrintName = \"NAME\"",
+            "ENT.Author = \"AUTHOR\"",
+            "ENT.Contact = \"CONTACT\"",
+            "ENT.Purpose = \"PURPOSE\"",
+            "ENT.Instructions = \"INSTRUCTIONS\"",
+            "ENT.Spawnable = true",
+            "ENT.AdminOnly = false",
+            "ENT.Category = \"CATEGORY\"",
+            "",
+            "function ENT:Initialize()",
+            "    if SERVER then",
+            "        self:SetModel(\"MODEL\")",
+            "        self:PhysicsInit(SOLID_VPHYSICS)",
+            "        self:SetMoveType(MOVETYPE_VPHYSICS)",
+            "        self:SetSolid(SOLID_VPHYSICS)",
+            "        self:PhysWake()",
+            "    end",
+            "end",
+            "",
+            "function ENT:Draw()",
+            "    if CLIENT then",
+            "       self:DrawModel()",
+            "    end",
+            "end"
+        ],
+        "description": "Creates the Entity structure"
+    },
+    "Entity-Shared": {
+        "prefix": "glua.Entity-Shared",
+        "body": [
+            "ENT.Type = \"anim\"",
+            "ENT.Base = \"base_gmodentity\"",
+            "ENT.PrintName = \"NAME\"",
+            "ENT.Author = \"AUTHOR\"",
+            "ENT.Contact = \"CONTACT\"",
+            "ENT.Purpose = \"PURPOSE\"",
+            "ENT.Instructions = \"INSTRUCTIONS\"",
+            "ENT.Spawnable = true",
+            "ENT.AdminOnly = false",
+            "ENT.Category = \"CATEGORY\""
+        ],
+        "description": "Creates the Entity structure (Shared)"
+    },
+    "Entity-Server": {
+        "prefix": "glua.Entity-Server",
+        "body": [
+            "function ENT:Initialize()",
+            "    self:SetModel(\"MODEL\")",
+            "    self:PhysicsInit(SOLID_VPHYSICS)",
+            "    self:SetMoveType(MOVETYPE_VPHYSICS)",
+            "    self:SetSolid(SOLID_VPHYSICS)",
+            "    self:PhysWake()",
+            "end"
+        ],
+        "description": "Creates the Entity structure (Server)"
+    },
+    "Entity-Client": {
+        "prefix": "glua.Entity-Client",
+        "body": [
+            "function ENT:Draw()",
+            "    self:DrawModel()",
+            "end"
+        ],
+        "description": "Creates the Entity structure (Client)"
     }
 }
