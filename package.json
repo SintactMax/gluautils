@@ -1,15 +1,20 @@
-{
+  {
   "name": "gluautils",
   "displayName": "gLua-Utils",
   "description": "Utils for Garry's Mod Lua",
   "version": "0.0.1",
   "publisher": "Sintact",
+  "logo": "./images/logo.png",
   "engines": {
     "vscode": "^1.96.0"
   },
   "categories": [
     "Snippets"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SintactMax/gluautils"
+  },
   "main": "./dist/extension.js",
   "contributes": {
     "snippets": [
