@@ -1,5 +1,4 @@
 # GLua-Utils Extension
----
 
 ## Overview
 This Quality-of-Life extension makes your GLua coding more efficient and faster. Who hates to always search for the SWEP or Entity structure to just copy and paste it?
